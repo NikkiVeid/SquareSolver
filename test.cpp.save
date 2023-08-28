@@ -5,11 +5,6 @@
 #include "test.h"
 #include "SquareEquationSolve.h"
 
-// Docs in headers
-/**
- * Function for single test of program
- * @param[in] test
- */
 int Test_Square(SquareTrinomialTest test)
 {
     SquareRoots roots = {0, 0};
