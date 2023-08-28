@@ -1,16 +1,17 @@
-compile=g++
+CXXFLAGS = -с
+CXX = g++
 
-all: Square
+SOURCES = $(wildcard *.cpp)
+# main.cpp SquareEquationSolve.cpp test.cpp interface.cpp
+OBJECTS = $(patsubts %.cpp, %.o, $(SOURCES))
+APPLICATION = Square
 
-Square: main.o SquareEquationSolve.o test.o interface.o
-	$(compile) main.o SquareEquationSolve.o test.o interface.o -o Square
-	
-main.o: main.cpp
-	$(compile) -c main.cpp
+all: $(APPLICATION)
 
-SquareEquationSolve.o: SquareEquationSolve.cpp
-	$(compile) -c SquareEquationSolve.cpp
-test.o: test.cpp
-	$(compile) -c test.cpp
-interface.o: interface.cpp
-	$(compile) -c interface.cpp
+$(APPLICATION): $(SOURCES)
+	$(CXX) $(OBJECTS) -o $@
+
+# $^ - all dependencies $< - first dep $@ - target
+
+%.o: %.cpp:
+	$(CXX) $(CXXFLAGS) $< -o $@
