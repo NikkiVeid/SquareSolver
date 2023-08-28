@@ -1,3 +1,4 @@
+///@file test.h
 #ifndef TEST_H_INCLUDED
 #define TEST_H_INCLUDED
 
@@ -10,11 +11,15 @@
  */
 struct SquareTrinomialTest
 {
-    SquareCoeffs coeffs; ///< Coefficients of Square equation
-    SquareRoots roots_true; ///< Roots of Square equation
+    SquareCoeffs coeffs;       ///< Coefficients of Square equation
+    SquareRoots roots_true;    ///< Roots of Square equation
     roots_amount n_roots_true; ///< Number of roots
 };
 
+/**
+ *Function for full test of program
+ * @param[out] n_succesion
+ */
 int TestTool();
 int Test_Square(SquareTrinomialTest test);
 

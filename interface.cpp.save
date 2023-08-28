@@ -3,18 +3,16 @@
 
 #include "struct.h"
 #include "test.h"
+#include "interface.h"
 
 /**
- * Function asks to press Enter to srart]]]
+ * Function asks to press Enter to start.
  */
 void ask_press_enter()
 {
     printf("Press Enter to start (or press any  other button to break).");
 }
 
-/**
- * Function introduce options of program
- */
 void intro()
 {
    const double EPSILON = 1e-6;
@@ -33,11 +31,6 @@ void intro()
    }
 }
 
-/**
- * Function enters coefficients of equation.
- * @param[in] coeffs, n_coef
- * @param[out] n_correct_values
- */
 int input_coeffs(double coeffs[], int n_coef)
 {
     int n_correct_values = 0;
@@ -59,10 +52,6 @@ int input_coeffs(double coeffs[], int n_coef)
     return n_correct_values;
 }
 
-/**
- * Function prints results of solving.
- * @param[in] n_roots, roots
- */
 void print_results(int n_roots, const struct SquareRoots *roots)
 {
     switch (n_roots)
@@ -80,9 +69,6 @@ void print_results(int n_roots, const struct SquareRoots *roots)
     }
 }
 
-/**
- * Function removes extra symbols.
- */
 bool line_cleaner()
 {
     char ch1 = 0;

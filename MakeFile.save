@@ -1,0 +1,16 @@
+compile=g++
+
+all: Square
+
+Square: main.o SquareEquationSolve.o test.o interface.o
+	$(compile) main.o SquareEquationSolve.o test.o interface.o -o Square
+	
+main.o: main.cpp
+	$(compile) -c main.cpp
+
+SquareEquationSolve.o: SquareEquationSolve.cpp
+	$(compile) -c SquareEquationSolve.cpp
+test.o: test.cpp
+	$(compile) -c test.cpp
+interface.o: interface.cpp
+	$(compile) -c interface.cpp

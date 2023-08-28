@@ -6,8 +6,6 @@
 #include "SquareEquationSolve.h"
 #include "test.h"
 
-static const int INF_AMOUNT = -1;
-const int PRECISION = 6;
 const int N_COEF = 3;
 
 int main()

@@ -5,6 +5,7 @@
 #include "test.h"
 #include "SquareEquationSolve.h"
 
+// Docs in headers
 /**
  * Function for single test of program
  * @param[in] test
@@ -21,18 +22,17 @@ int Test_Square(SquareTrinomialTest test)
         printf("\033[31mFailed!\033[0m\n",
                "\033[31mOutput: x1 = %lg, x2 = %lg, n_roots = %lg\033[0m\n",
                "\033[31mExpected: x1 = %lg, x2 = %lg, n_roots = %lg\033[0m\n",
-               roots.x1, roots.x2, n_roots, test.roots_true.x1, test.roots_true.x2, test.n_roots_true);
+               roots.x1, roots.x2, n_roots,
+               test.roots_true.x1, test.roots_true.x2, test.n_roots_true);
         return 0;
     }
     else
     {
-        printf("\033[32mOK\033[0m\n");
+        // define GREEN "\033[32m"
+        printf(GREEN "OK\033[0m\n");
         return 1;
     }
 
-/**
- * Function for full test of program
- */
 int TestTool()
 {
     const int N_TESTS = 5;
@@ -46,13 +46,12 @@ int TestTool()
         {{0,-1,  1}, {1,   0}, roots_1},
         {{1, 1,  1}, {0,   0}, roots_0}
     };
-    for (int index = 0; index < N_te
+    for (int index = 0; index < N_TESTS; index++)
 
     for (int index = 0; index < N_TESTS; index++)
     {
         n_succession += Test_Square(test[index]);
     }
-}
-
     return n_succession;
 }
+

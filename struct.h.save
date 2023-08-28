@@ -1,15 +1,30 @@
 #ifndef STRUCT_H_INCLUDED
 #define STRUCT_H_INCLUDED
-///New type for expression of number of roots
-enum roots_amount {roots_0, roots_1, roots_2, roots_INF_AMOUNT};
 
-struct SquareCoeffs
+///New type for expression of number of roots
+enum RootsAmount //Как структуры с большой буквы
 {
-    double a;
-    double b;
-    double c;
+    roots_0 = 0, 
+    roots_1 = 1, 
+    roots_2 = 2, 
+    roots_INF_AMOUNT = 3,
 };
 
+/**
+ * Structure for coefficients.
+ * It stores coefficients of Square equation.
+ */
+struct SquareCoeffs
+{
+    double a; ///< coefficient of x^2
+    double b; ///< coefficient of x
+    double c; ///< free coefficient
+};
+
+/**
+ * Structure for coefficients.
+ * It stores roots of Square equation.
+ */
 struct SquareRoots
 {
     double x1;

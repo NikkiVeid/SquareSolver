@@ -1,7 +1,14 @@
 #ifndef STRUCT_H_INCLUDED
 #define STRUCT_H_INCLUDED
+
 ///New type for expression of number of roots
-enum roots_amount {roots_0, roots_1, roots_2, roots_INF_AMOUNT};
+enum RootsAmount //Как структуры с большой буквы
+{
+    roots_0 = 0,
+    roots_1 = 1,
+    roots_2 = 2,
+    roots_INF_AMOUNT = 3,
+};
 
 /**
  * Structure for coefficients.
