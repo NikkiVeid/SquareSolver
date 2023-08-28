@@ -1,5 +1,3 @@
-///@file SquareEquationSolve.cpp
-
 #include <assert.h>
 #include <math.h>
 #include <stdio.h>
@@ -75,9 +73,9 @@ roots_amount square_solve(SquareCoeffs coeffs, SquareRoots *roots)
 }
 
 /**
- * Function checks is number equal zero or not
- * Formula: |n|<EPSILON
- * @param[in] n
+ * Function checks number 
+ *
+ *
  */
 bool is_not_zerof(double n)
 {
@@ -88,11 +86,6 @@ bool is_not_zerof(double n)
     return 0;
 }
 
-/**
- * Function checks is the number less than zero or not
- * Formula: n< -EPSILON
- * @param[in] n
- */
 bool below_zerof(double n)
 {
    const double EPSILON = 1e-6;

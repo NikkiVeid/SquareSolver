@@ -4,7 +4,7 @@
 #include "struct.h"
 
 /**
- * Structure for testing.
+ * Structure for testing
  * It stores coefficients of Square equation, roots of this equation
  * and number of roots.
  */

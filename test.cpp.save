@@ -32,7 +32,6 @@ int Test_Square(SquareTrinomialTest test)
 
 /**
  * Function for full test of program
- * @param[out] n_succesion
  */
 int TestTool()
 {
@@ -47,13 +46,12 @@ int TestTool()
         {{0,-1,  1}, {1,   0}, roots_1},
         {{1, 1,  1}, {0,   0}, roots_0}
     };
-    for (int index = 0; index < N_TESTS; index++)
+    for (int index = 0; index < N_te
 
     for (int index = 0; index < N_TESTS; index++)
     {
         n_succession += Test_Square(test[index]);
     }
-    return n_succession;
 }
 
     return n_succession;

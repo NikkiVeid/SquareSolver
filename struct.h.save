@@ -3,21 +3,13 @@
 ///New type for expression of number of roots
 enum roots_amount {roots_0, roots_1, roots_2, roots_INF_AMOUNT};
 
-/**
- * Structure for coefficients.
- * It stores coefficients of Square equation.
- */
 struct SquareCoeffs
 {
-    double a; ///< coefficient of x^2
-    double b; ///< coefficient of x
-    double c; ///< free coefficient
+    double a;
+    double b;
+    double c;
 };
 
-/**
- * Structure for coefficients.
- * It stores roots of Square equation.
- */
 struct SquareRoots
 {
     double x1;
