@@ -5,6 +5,8 @@
 #include "test.h"
 #include "SquareEquationSolve.h"
 
+const char CLOSING[] = "\033[0m\n";
+
 int Test_Square(SquareTrinomialTest test)
 {
     SquareRoots roots = {0, 0};
@@ -14,19 +16,21 @@ int Test_Square(SquareTrinomialTest test)
         (roots.x2 != test.roots_true.x2) ||
         (n_roots != test.n_roots_true))
     {
-        printf("\033[31mFailed!\033[0m\n",
-               "\033[31mOutput: x1 = %lg, x2 = %lg, n_roots = %lg\033[0m\n",
-               "\033[31mExpected: x1 = %lg, x2 = %lg, n_roots = %lg\033[0m\n",
+        const char RED[] = "\033[31m";
+        printf("%s Failed!%s", RED, CLOSING,
+               "%sOutput: x1 = %lg, x2 = %lg, n_roots = %lg%s", RED, CLOSING,
+               "%sExpected: x1 = %lg, x2 = %lg, n_roots = %lg%s", RED, CLOSING,
                roots.x1, roots.x2, n_roots,
                test.roots_true.x1, test.roots_true.x2, test.n_roots_true);
         return 0;
     }
     else
     {
-        // define GREEN "\033[32m"
-        printf(GREEN "OK\033[0m\n");
+        const char GREEN[] = "\033[32m";
+        printf("%sOK%s", GREEN, CLOSING);
         return 1;
     }
+}
 
 int TestTool()
 {
@@ -41,12 +45,53 @@ int TestTool()
         {{0,-1,  1}, {1,   0}, roots_1},
         {{1, 1,  1}, {0,   0}, roots_0}
     };
-    for (int index = 0; index < N_TESTS; index++)
 
     for (int index = 0; index < N_TESTS; index++)
     {
         n_succession += Test_Square(test[index]);
     }
     return n_succession;
+}
+
+#include <errno.h>
+int TestFile()
+{
+    FILE *test_file = NULL;
+    char name_file[] = "test.txt";
+
+    int n_succession_file = 0;
+    //test_file = fopen(name_file, "r");
+    //if (test_file != NULL)
+    if ((test_file = fopen(name_file, "r")) != NULL)
+    {
+        struct SquareTrinomialTest file_test = {};
+
+        while (fgetc(test_file) != EOF)
+        {
+            fgetc(test_file);
+
+            if (fscanf(test_file, "%lf%lf%lf%lf%lf%d\n", &(file_test.coeffs.a),
+                                                         &(file_test.coeffs.b),
+                                                         &(file_test.coeffs.c),
+                                                         &(file_test.roots_true.x1),
+                                                         &(file_test.roots_true.x2),
+                                                         &(file_test.n_roots_true)) == 6)
+            {
+                n_succession_file += Test_Square(file_test);
+            }
+            else
+            {
+                printf("File input error.\n");
+            }
+        }
+
+    }
+    else
+    {
+        printf("File opening error.\n");
+    }
+
+    fclose(test_file);
+    return n_succession_file;
 }
 

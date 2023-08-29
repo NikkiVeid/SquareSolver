@@ -2,7 +2,7 @@
 #ifndef INTERFACE_H_INCLUDED
 #define INTERFACE_H_INCLUDED
 
-static const int INF_AMOUNT = -1;
+static const int INF_AMOUNT = 3;
 static const int PRECISION  =  6;
 
 /**

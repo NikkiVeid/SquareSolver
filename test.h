@@ -13,7 +13,7 @@ struct SquareTrinomialTest
 {
     SquareCoeffs coeffs;       ///< Coefficients of Square equation
     SquareRoots roots_true;    ///< Roots of Square equation
-    roots_amount n_roots_true; ///< Number of roots
+    RootsAmount n_roots_true; ///< Number of roots
 };
 
 /**
@@ -21,6 +21,12 @@ struct SquareTrinomialTest
  * @param[out] n_succesion
  */
 int TestTool();
+
+/**
+ *Function for file test of program
+ * @param[out] n_succesion
+ */
+int TestFile();
 
 /**
  * Function for single test of program

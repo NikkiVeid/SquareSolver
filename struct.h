@@ -2,7 +2,7 @@
 #define STRUCT_H_INCLUDED
 
 ///New type for expression of number of roots
-enum RootsAmount //Как структуры с большой буквы
+enum RootsAmount
 {
     roots_0 = 0,
     roots_1 = 1,

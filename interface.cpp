@@ -13,9 +13,12 @@ void ask_press_enter()
 void intro()
 {
    const double EPSILON = 1e-6;
+
    printf("Enter values with an accuracy less than %lg!\n", EPSILON);
+
    char test_agree = 0;
    char ch = 0;
+
    printf("Do you wanna test program? (Say \"+\", if you want)\n");
    int n = -1;
    test_agree = getchar();
@@ -23,8 +26,19 @@ void intro()
                 continue;
    if (test_agree == '+')
    {
-                n = TestTool();
-                printf("Number of correct tests: %d from 5\n", n);
+        n = TestTool();
+        printf("Number of correct tests: %d from 5\n", n);
+   }
+
+   printf("Do you wanna use test file? (Say \"+\", if you want)\n");
+   n = -1;
+   test_agree = getchar();
+   while ((ch=getchar()) != '\n')
+                continue;
+   if (test_agree == '+')
+   {
+        n = TestFile();
+        printf("Number of correct tests: %d from 2\n", n);
    }
 }
 
@@ -60,7 +74,7 @@ void print_results(int n_roots, const struct SquareRoots *roots)
         case 2: printf("x1 = %.*lf\n", PRECISION, roots->x1);
                 printf("x2 = %.*lf\n", PRECISION, roots->x2);
                 break;
-        case INF_AMOUNT: printf("Infinite amount of roots.");
+        case INF_AMOUNT: printf("Infinite amount of roots.\n");
                          break;
         default: break;
     }
@@ -71,7 +85,7 @@ bool line_cleaner()
     char ch1 = 0;
     int n_extrasymbols = 0;
     while ((ch1 = getchar()) != '\n')
-                     n_extrasymbols += 1;
+                     n_extrasymbols++;
     if (n_extrasymbols > 0)
         return 1;
     else

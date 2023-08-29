@@ -8,7 +8,7 @@
 
 const double EPSILON = 1e-6;
 
-roots_amount full_equation_solve(SquareCoeffs coeffs, SquareRoots *roots)
+RootsAmount full_equation_solve(SquareCoeffs coeffs, SquareRoots *roots)
 {
   assert(isfinite(coeffs.a));
   assert(isfinite(coeffs.b));
@@ -21,7 +21,7 @@ roots_amount full_equation_solve(SquareCoeffs coeffs, SquareRoots *roots)
            linear_solve(coeffs, roots);
 }
 
-roots_amount linear_solve(SquareCoeffs coeffs, SquareRoots *roots)
+RootsAmount linear_solve(SquareCoeffs coeffs, SquareRoots *roots)
 {
   assert(isfinite(coeffs.b));
   assert(isfinite(coeffs.c));
@@ -38,7 +38,7 @@ roots_amount linear_solve(SquareCoeffs coeffs, SquareRoots *roots)
     return roots_INF_AMOUNT;
 }
 
-roots_amount square_solve(SquareCoeffs coeffs, SquareRoots *roots)
+RootsAmount square_solve(SquareCoeffs coeffs, SquareRoots *roots)
 {
    assert(isfinite(coeffs.a));
    assert(isfinite(coeffs.b));
@@ -46,9 +46,11 @@ roots_amount square_solve(SquareCoeffs coeffs, SquareRoots *roots)
    assert(roots != NULL);
 
    double discr = NAN, sqr = NAN;
+
    discr = (coeffs.b * coeffs.b) - (4 * coeffs.a * coeffs.c);
    if (below_zerod(discr))
          return roots_0;
+
    sqr = sqrt(discr);
    roots->x1 = (-coeffs.b + sqr) / (2 * coeffs.a);
    roots->x2 = (-coeffs.b - sqr) / (2 * coeffs.a);
@@ -68,7 +70,6 @@ bool is_not_zerod(double n)
 
 bool below_zerod(double n)
 {
-   const double EPSILON = 1e-6;
    if (n < -EPSILON)
     return 1;
    else
