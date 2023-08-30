@@ -5,18 +5,19 @@
 #include "test.h"
 #include "SquareEquationSolve.h"
 
-const char CLOSING[] = "\033[0m\n";
+const char CLOSING[] = "\x1[0m\n";
 
 int Test_Square(SquareTrinomialTest test)
 {
     SquareRoots roots = {0, 0};
-    int n_roots = full_equation_solve(test.coeffs, &roots);
+    int n_roots = full_equation_solve(&test.coeffs, &roots);
 
     if ((roots.x1 != test.roots_true.x1) ||
         (roots.x2 != test.roots_true.x2) ||
         (n_roots != test.n_roots_true))
     {
-        const char RED[] = "\033[31m";
+        const char RED[] = "\x1[31m";
+
         printf("%s Failed!%s"
                "%sOutput: x1 = %lg, x2 = %lg, n_roots = %d%s"
                "%sExpected: x1 = %lg, x2 = %lg, n_roots = %d%s",
@@ -27,7 +28,7 @@ int Test_Square(SquareTrinomialTest test)
     }
     else
     {
-        const char GREEN[] = "\033[32m";
+        const char GREEN[] = "\x1[32m";
         printf("%sOK%s", GREEN, CLOSING);
         return 1;
     }

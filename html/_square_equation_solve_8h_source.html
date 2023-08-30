@@ -23,7 +23,6 @@
   <td id="projectalign">
    <div id="projectname">SquareSolver
    </div>
-   <div id="projectbrief">This project Square Equations</div>
   </td>
  </tr>
  </tbody>
@@ -78,26 +77,30 @@ $(document).ready(function() { init_codefold(0); });
   <div class="headertitle"><div class="title">SquareEquationSolve.h</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef SQUAREEQUATIONSOLVE_H_INCLUDED</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define SQUAREEQUATIONSOLVE_H_INCLUDED</span></div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;struct.h&quot;</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>roots_amount <a class="code hl_function" href="_square_equation_solve_8cpp.html#ab1718cb650185172b8cf28774132f127">full_equation_solve</a>(<a class="code hl_struct" href="struct_square_coeffs.html">SquareCoeffs</a> coeffs, <a class="code hl_struct" href="struct_square_roots.html">SquareRoots</a> *roots);</div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>roots_amount <a class="code hl_function" href="_square_equation_solve_8cpp.html#a028fc26ecfe24eb05997939f78fdeccf">linear_solve</a>(<a class="code hl_struct" href="struct_square_coeffs.html">SquareCoeffs</a> coeffs, <a class="code hl_struct" href="struct_square_roots.html">SquareRoots</a> *roots);</div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>roots_amount <a class="code hl_function" href="_square_equation_solve_8cpp.html#aceda5558c773e7235272e02b389e8149">square_solve</a>(<a class="code hl_struct" href="struct_square_coeffs.html">SquareCoeffs</a> coeffs, <a class="code hl_struct" href="struct_square_roots.html">SquareRoots</a> *roots);</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keywordtype">bool</span> <a class="code hl_function" href="_square_equation_solve_8cpp.html#a51092eae08ad4aeb3b45ef6aec1ae0c8">is_not_zerof</a>(<span class="keywordtype">double</span> n);</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keywordtype">bool</span> <a class="code hl_function" href="_square_equation_solve_8cpp.html#acb1a2dd9007a6010f73345f7d07582dd">below_zerof</a>(<span class="keywordtype">double</span> n);</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#endif </span><span class="comment">// SQUAREEQUATIONSOLVE_H_INCLUDED</span></div>
-<div class="ttc" id="a_square_equation_solve_8cpp_html_a028fc26ecfe24eb05997939f78fdeccf"><div class="ttname"><a href="_square_equation_solve_8cpp.html#a028fc26ecfe24eb05997939f78fdeccf">linear_solve</a></div><div class="ttdeci">roots_amount linear_solve(SquareCoeffs coeffs, SquareRoots *roots)</div><div class="ttdef"><b>Definition</b> SquareEquationSolve.cpp:33</div></div>
-<div class="ttc" id="a_square_equation_solve_8cpp_html_a51092eae08ad4aeb3b45ef6aec1ae0c8"><div class="ttname"><a href="_square_equation_solve_8cpp.html#a51092eae08ad4aeb3b45ef6aec1ae0c8">is_not_zerof</a></div><div class="ttdeci">bool is_not_zerof(double n)</div><div class="ttdef"><b>Definition</b> SquareEquationSolve.cpp:82</div></div>
-<div class="ttc" id="a_square_equation_solve_8cpp_html_ab1718cb650185172b8cf28774132f127"><div class="ttname"><a href="_square_equation_solve_8cpp.html#ab1718cb650185172b8cf28774132f127">full_equation_solve</a></div><div class="ttdeci">roots_amount full_equation_solve(SquareCoeffs coeffs, SquareRoots *roots)</div><div class="ttdef"><b>Definition</b> SquareEquationSolve.cpp:14</div></div>
-<div class="ttc" id="a_square_equation_solve_8cpp_html_acb1a2dd9007a6010f73345f7d07582dd"><div class="ttname"><a href="_square_equation_solve_8cpp.html#acb1a2dd9007a6010f73345f7d07582dd">below_zerof</a></div><div class="ttdeci">bool below_zerof(double n)</div><div class="ttdef"><b>Definition</b> SquareEquationSolve.cpp:96</div></div>
-<div class="ttc" id="a_square_equation_solve_8cpp_html_aceda5558c773e7235272e02b389e8149"><div class="ttname"><a href="_square_equation_solve_8cpp.html#aceda5558c773e7235272e02b389e8149">square_solve</a></div><div class="ttdeci">roots_amount square_solve(SquareCoeffs coeffs, SquareRoots *roots)</div><div class="ttdef"><b>Definition</b> SquareEquationSolve.cpp:57</div></div>
-<div class="ttc" id="astruct_square_coeffs_html"><div class="ttname"><a href="struct_square_coeffs.html">SquareCoeffs</a></div><div class="ttdef"><b>Definition</b> struct.h:11</div></div>
-<div class="ttc" id="astruct_square_roots_html"><div class="ttname"><a href="struct_square_roots.html">SquareRoots</a></div><div class="ttdef"><b>Definition</b> struct.h:22</div></div>
+<a href="_square_equation_solve_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#ifndef SQUAREEQUATIONSOLVE_H_INCLUDED</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#define SQUAREEQUATIONSOLVE_H_INCLUDED</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;struct.h&quot;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>RootsAmount <a class="code hl_function" href="_square_equation_solve_8h.html#a1f37e9b0f8606d902e05299c6ec9b772">full_equation_solve</a>(<a class="code hl_struct" href="struct_square_coeffs.html">SquareCoeffs</a> coeffs, <a class="code hl_struct" href="struct_square_roots.html">SquareRoots</a> *roots);</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>RootsAmount <a class="code hl_function" href="_square_equation_solve_8h.html#ac41c42b4c20cf4295dd1eadafe562bdc">linear_solve</a>(<a class="code hl_struct" href="struct_square_coeffs.html">SquareCoeffs</a> coeffs, <a class="code hl_struct" href="struct_square_roots.html">SquareRoots</a> *roots);</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>RootsAmount <a class="code hl_function" href="_square_equation_solve_8h.html#a9d7791f6234f201507c6fdf74c4584ca">square_solve</a>(<a class="code hl_struct" href="struct_square_coeffs.html">SquareCoeffs</a> coeffs, <a class="code hl_struct" href="struct_square_roots.html">SquareRoots</a> *roots);</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="keywordtype">bool</span> <a class="code hl_function" href="_square_equation_solve_8h.html#a8690bdfd7a2a2e2ada62a1b99d8f5696">is_not_zerod</a>(<span class="keywordtype">double</span> n);</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="keywordtype">bool</span> <a class="code hl_function" href="_square_equation_solve_8h.html#a2738c415d7824470aae7d4cef5d478c6">below_zerod</a>(<span class="keywordtype">double</span> n);</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="preprocessor">#endif </span><span class="comment">// SQUAREEQUATIONSOLVE_H_INCLUDED</span></div>
+<div class="ttc" id="a_square_equation_solve_8h_html_a1f37e9b0f8606d902e05299c6ec9b772"><div class="ttname"><a href="_square_equation_solve_8h.html#a1f37e9b0f8606d902e05299c6ec9b772">full_equation_solve</a></div><div class="ttdeci">RootsAmount full_equation_solve(SquareCoeffs coeffs, SquareRoots *roots)</div><div class="ttdef"><b>Definition</b> SquareEquationSolve.cpp:11</div></div>
+<div class="ttc" id="a_square_equation_solve_8h_html_a2738c415d7824470aae7d4cef5d478c6"><div class="ttname"><a href="_square_equation_solve_8h.html#a2738c415d7824470aae7d4cef5d478c6">below_zerod</a></div><div class="ttdeci">bool below_zerod(double n)</div><div class="ttdef"><b>Definition</b> SquareEquationSolve.cpp:70</div></div>
+<div class="ttc" id="a_square_equation_solve_8h_html_a8690bdfd7a2a2e2ada62a1b99d8f5696"><div class="ttname"><a href="_square_equation_solve_8h.html#a8690bdfd7a2a2e2ada62a1b99d8f5696">is_not_zerod</a></div><div class="ttdeci">bool is_not_zerod(double n)</div><div class="ttdef"><b>Definition</b> SquareEquationSolve.cpp:65</div></div>
+<div class="ttc" id="a_square_equation_solve_8h_html_a9d7791f6234f201507c6fdf74c4584ca"><div class="ttname"><a href="_square_equation_solve_8h.html#a9d7791f6234f201507c6fdf74c4584ca">square_solve</a></div><div class="ttdeci">RootsAmount square_solve(SquareCoeffs coeffs, SquareRoots *roots)</div><div class="ttdef"><b>Definition</b> SquareEquationSolve.cpp:41</div></div>
+<div class="ttc" id="a_square_equation_solve_8h_html_ac41c42b4c20cf4295dd1eadafe562bdc"><div class="ttname"><a href="_square_equation_solve_8h.html#ac41c42b4c20cf4295dd1eadafe562bdc">linear_solve</a></div><div class="ttdeci">RootsAmount linear_solve(SquareCoeffs coeffs, SquareRoots *roots)</div><div class="ttdef"><b>Definition</b> SquareEquationSolve.cpp:24</div></div>
+<div class="ttc" id="astruct_square_coeffs_html"><div class="ttname"><a href="struct_square_coeffs.html">SquareCoeffs</a></div><div class="ttdef"><b>Definition</b> struct.h:18</div></div>
+<div class="ttc" id="astruct_square_roots_html"><div class="ttname"><a href="struct_square_roots.html">SquareRoots</a></div><div class="ttdef"><b>Definition</b> struct.h:29</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

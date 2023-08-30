@@ -4,12 +4,14 @@
 
 #include "struct.h"
 
+const double EPSILON = 1e-7;
+
 /**
  * Function for solving of square  and linear equation
  * @param[in] coeffs, roots
  * @param[out] x1,x2
  */
-RootsAmount full_equation_solve(SquareCoeffs coeffs, SquareRoots *roots);
+RootsAmount full_equation_solve(const SquareCoeffs *coeffs, SquareRoots *roots);
 
 /**
  * Function for solving of linear equation
@@ -17,7 +19,7 @@ RootsAmount full_equation_solve(SquareCoeffs coeffs, SquareRoots *roots);
  * @param[in] coeffs, roots
  * @param[out] x1
  */
-RootsAmount linear_solve(SquareCoeffs coeffs, SquareRoots *roots);
+RootsAmount linear_solve(const SquareCoeffs *coeffs, SquareRoots *roots);
 
 /**
  * Function for solving of linear equation
@@ -26,7 +28,7 @@ RootsAmount linear_solve(SquareCoeffs coeffs, SquareRoots *roots);
  * @param[in] coeffs, roots
  * @param[out] x1
  */
-RootsAmount square_solve(SquareCoeffs coeffs, SquareRoots *roots);
+RootsAmount square_solve(const SquareCoeffs *coeffs, SquareRoots *roots);
 
 /**
  * Function checks is number equal zero or not

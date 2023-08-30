@@ -1,9 +1,10 @@
 ///@file interface.h
+///@brief
 #ifndef INTERFACE_H_INCLUDED
 #define INTERFACE_H_INCLUDED
 
 static const int INF_AMOUNT = 3;
-static const int PRECISION  =  6;
+static const int PRECISION  = 6;
 
 /**
  * Function introduce options of program
