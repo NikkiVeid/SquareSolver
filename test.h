@@ -4,6 +4,12 @@
 
 #include "struct.h"
 
+///Constant for number of program tests
+const int N_TESTS = 5;
+
+///Constant for number of file tests
+const int N_FILE_TESTS = 2;
+
 /**
  * Structure for testing.
  * It stores coefficients of Square equation, roots of this equation

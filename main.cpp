@@ -15,7 +15,7 @@ int main(int argc, const char *argv[])
     if (argc - 1)
     {
         int n = TestFile();
-        printf("Number of correct file tests: %d from 2\n", n);
+        printf("Number of correct file tests: %d from %d\n", n, N_FILE_TESTS);
     }
     intro();
     ask_press_enter();

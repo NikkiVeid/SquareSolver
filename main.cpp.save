@@ -15,7 +15,7 @@ int main(int argc, const char *argv[])
     if (argc - 1)
     {
         int n = TestFile();
-        printf("Number of correct file tests: %d from 2\n", n);
+        printf("Number of correct file tests: %d from %d\n", n, N_FI);
     }
     intro();
     ask_press_enter();
@@ -26,7 +26,8 @@ int main(int argc, const char *argv[])
         printf("Enter values of coefficients in decreasing order of powers:\n");
         if (input_coeffs(coeffs, N_COEF) == N_COEF)
         {
-            SquareRoots roots = {NAN, NAN};// --> input_coeffs
+            SquareRoots roots = {NAN, NAN};
+            SquareCoeffs coeffs1 = {coeffs[0], coeffs[1], coeffs[2]};
 
             int n_roots = full_equation_solve(&coeffs1, &roots);
 

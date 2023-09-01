@@ -26,7 +26,7 @@ void intro()
    if (test_agree == '+')
    {
         n = TestTool();
-        printf("Number of correct tests: %d from 5\n", n);
+        printf("Number of correct tests: %d from %d\n", n, N_TESTS);
    }
 
 }

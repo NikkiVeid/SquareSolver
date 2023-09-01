@@ -1,9 +1,11 @@
 ///@file interface.h
-///@brief
 #ifndef INTERFACE_H_INCLUDED
 #define INTERFACE_H_INCLUDED
 
+///Constant for expressing of infinite amount of roots
 static const int INF_AMOUNT = 3;
+
+///Constant for accuracy of solving
 static const int PRECISION  = 6;
 
 /**

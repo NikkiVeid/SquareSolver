@@ -5,7 +5,7 @@
 enum RootsAmount
 {
     roots_0 = 0,  ///< ...
-    roots_1 = 1,
+    roots_1 = 7,
     roots_2 = 2,
     roots_INF_AMOUNT = 3,
 };

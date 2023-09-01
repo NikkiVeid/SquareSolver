@@ -5,6 +5,7 @@
 #include "test.h"
 #include "SquareEquationSolve.h"
 
+///Constant for closing of color sentences
 const char CLOSING[] = "\x1[0m\n";
 
 int Test_Square(SquareTrinomialTest test)
@@ -36,8 +37,6 @@ int Test_Square(SquareTrinomialTest test)
 
 int TestTool()
 {
-    const int N_TESTS = 5;
-
     int n_succession = 0;
 
     struct SquareTrinomialTest test[N_TESTS] = {
